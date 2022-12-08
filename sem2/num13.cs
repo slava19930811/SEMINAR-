@@ -1,11 +1,16 @@
-﻿//Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
-//5 -> 2, 4
-//8 -> 2, 4, 6, 8
-Console.WriteLine("Введите длину от 1 до N: ");
-string num = Console.ReadLine()!;
-int n = int.Parse(num);
-
-for (int i = 1; i <= n; i++)
-    if (i % 2 == 0)
-
-        Console.WriteLine(i);
+﻿//Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет. Отрицательные числа должны нормально работать.
+//-645 -> 5
+//645 -> 5
+//78 -> третьей цифры нет
+//3261279 -> 6
+Console.Write("Введи число: ");
+int anyNumber = Convert.ToInt32(Console.ReadLine());
+string anyNumberText = Convert.ToString(anyNumber);
+if (anyNumberText.Length > 2)
+{
+  Console.WriteLine("третья цифра " + anyNumberText[2]);
+}
+else 
+{
+  Console.WriteLine("третьей цифры нет ");
+}
